@@ -1,0 +1,41 @@
+/* Utilise les variables de globals.css (colors.css). */
+.carte {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.groupe { display: grid; gap: 0.35rem; }
+.groupe label { font-weight: 600; color: var(--ink-2); }
+.aide { color: var(--muted); font-size: 0.875rem; }
+
+.champ {
+  width: 100%;
+  min-height: 2.75rem;
+  padding: 0.5rem 0.75rem;
+  background: var(--surface);
+  color: var(--ink);
+  border: 1px solid var(--border-input);
+  border-radius: var(--radius-sm);
+  font: inherit;
+}
+
+.bouton {
+  min-height: 2.75rem;
+  padding: 0.5rem 1rem;
+  background: var(--brand);
+  color: #fff;
+  border: 1px solid var(--brand);
+  border-radius: var(--radius-sm);
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+.bouton:hover:not(:disabled) { background: var(--brand-dark); }
+.bouton:disabled { opacity: 0.6; cursor: not-allowed; }
+
+.erreur { background: var(--danger-bg); color: var(--danger-ink); padding: 0.5rem 0.75rem; border-radius: var(--radius-sm); }
+.succes { background: var(--ok-bg); color: var(--ok-ink); padding: 0.5rem 0.75rem; border-radius: var(--radius-sm); }
