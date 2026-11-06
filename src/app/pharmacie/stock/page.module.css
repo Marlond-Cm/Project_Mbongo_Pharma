@@ -1,0 +1,25 @@
+.entete {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.titre { font-size: 1.5rem; color: var(--brand-dark); }
+.soustitre { color: var(--muted); }
+
+.lienFiche {
+  color: var(--brand);
+  font-weight: 600;
+  text-underline-offset: 3px;
+}
+
+.alerte {
+  margin-top: 1rem;
+  background: var(--warn-bg);
+  color: var(--warn-ink);
+  padding: 0.9rem 1rem;
+  border-radius: var(--radius-sm);
+}

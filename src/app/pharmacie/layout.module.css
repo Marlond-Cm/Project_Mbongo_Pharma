@@ -1,0 +1,17 @@
+.cadre {
+  max-width: 64rem;
+  margin: 0 auto;
+  padding: 1rem;
+  display: grid;
+  gap: 1rem;
+  align-items: start;
+}
+
+.contenu { min-width: 0; }
+
+@media (min-width: 48rem) {
+  .cadre {
+    grid-template-columns: 15rem 1fr;
+    padding: 1.5rem;
+  }
+}

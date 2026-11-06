@@ -1,0 +1,32 @@
+.menu {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 0.5rem;
+}
+
+.liste {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+
+.lien {
+  display: block;
+  min-height: 2.75rem;
+  padding: 0.65rem 0.9rem;
+  border-radius: var(--radius-sm);
+  color: var(--ink-2);
+  text-decoration: none;
+  font-weight: 600;
+}
+.lien:hover { background: var(--bg); }
+.actif { background: var(--brand-light); color: var(--brand-ink); }
+
+/* Ordinateur : menu en colonne */
+@media (min-width: 48rem) {
+  .liste { flex-direction: column; }
+}

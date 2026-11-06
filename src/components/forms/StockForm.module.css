@@ -1,0 +1,62 @@
+/* Utilise les variables de globals.css (colors.css). */
+.conteneur { display: grid; gap: 1.25rem; }
+
+.carte {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  display: grid;
+  gap: 0.9rem;
+}
+
+.titre { font-size: 1.15rem; color: var(--brand-dark); }
+
+.groupe { display: grid; gap: 0.35rem; }
+.groupe label { font-weight: 600; color: var(--ink-2); }
+
+.champ {
+  width: 100%;
+  min-height: 2.75rem;
+  padding: 0.5rem 0.75rem;
+  background: var(--surface);
+  color: var(--ink);
+  border: 1px solid var(--border-input);
+  border-radius: var(--radius-sm);
+  font: inherit;
+}
+
+.bouton,
+.boutonSecondaire,
+.boutonDanger {
+  min-height: 2.75rem;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-sm);
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+.bouton { background: var(--brand); color: #fff; border: 1px solid var(--brand); }
+.bouton:hover:not(:disabled) { background: var(--brand-dark); }
+.boutonSecondaire { background: var(--brand-light); color: var(--brand-ink); border: 1px solid var(--border); }
+.boutonDanger { background: var(--danger-bg); color: var(--danger-ink); border: 1px solid var(--danger-bg); }
+.bouton:disabled,
+.boutonSecondaire:disabled,
+.boutonDanger:disabled { opacity: 0.6; cursor: not-allowed; }
+
+.liste { list-style: none; padding: 0; display: grid; gap: 0.75rem; }
+.ligne { border-top: 1px solid var(--border-soft); padding-top: 0.75rem; display: grid; gap: 0.5rem; }
+.ligneTete { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.25rem 1rem; }
+.date { color: var(--muted); font-size: 0.875rem; }
+.ligneActions { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; }
+.formLigne { display: flex; flex-wrap: wrap; gap: 0.5rem; flex: 1 1 14rem; }
+.formLigne .champ { flex: 1 1 8rem; }
+
+.etiquetteCachee {
+  position: absolute; width: 1px; height: 1px; overflow: hidden;
+  clip: rect(0 0 0 0); white-space: nowrap;
+}
+
+.erreur { background: var(--danger-bg); color: var(--danger-ink); padding: 0.5rem 0.75rem; border-radius: var(--radius-sm); }
+.succes { background: var(--ok-bg); color: var(--ok-ink); padding: 0.5rem 0.75rem; border-radius: var(--radius-sm); }
+.vide { color: var(--muted); }
