@@ -1,8 +1,6 @@
-// Schémas zod de Mbongo Pharma. Chacun ajoute ceux de ses formulaires.
-// Les messages sont en français : ils s'affichent tels quels dans les formulaires.
 import { z } from 'zod'
 
-// --- Stock (issue 8, Clairline) ---
+// Stock (issue 8)
 
 export const STATUTS_STOCK = ['DISPONIBLE', 'STOCK_FAIBLE', 'RUPTURE']
 
@@ -29,10 +27,7 @@ export const retraitStockSchema = z.object({
   stockItemId: z.string().min(1, 'Ligne de stock introuvable.'),
 })
 
-// --- Gardes (issue 10, Clairline) ---
-// Le champ <input type="datetime-local"> envoie "2026-11-06T08:00", sans fuseau.
-// On l'interprète comme une heure de Brazzaville (UTC+1, sans heure d'été)
-// puis on obtient un instant exact : new Date() le stocke en UTC.
+//Gardes (issue 10).
 
 const heureBrazzaville = z
   .string({ message: 'Indiquez une date et une heure.' })
@@ -58,16 +53,13 @@ export const suppressionGardeSchema = z.object({
   gardeId: z.string().min(1, 'Garde introuvable.'),
 })
 
-// --- Validation des pharmacies (issue 11, Clairline) ---
+// Validation des pharmacies (issue 11) 
 
 export const decisionPharmacieSchema = z.object({
   pharmacieId: z.string().min(1, 'Pharmacie introuvable.'),
 })
 
-// --- Profil de la pharmacie (issue 12, Clairline) ---
-// Numéros : on accepte « 06 123 45 67 », « 061234567 », « +242 06 123 45 67 » ou
-// « 00242… » et on enregistre toujours la forme internationale « +242061234567 »,
-// celle que lib/whatsapp.js transforme en lien wa.me.
+// Profil de la pharmacie (issue 12)
 
 function normaliserTelephone(brut) {
   const sansSeparateurs = brut.replace(/[\s.\-()]/g, '')
