@@ -138,15 +138,7 @@ export async function inscrire(_etat, formData) {
     return echec('Une erreur technique est survenue. Veuillez réessayer.', valeurs)
   }
 
-  try {
-  } catch (erreur) {
-    if (erreur instanceof AuthError) {
-    } else {
-      console.error('Erreur session après inscription:', erreur)
-    }
-  }
-
-  redirect('/pharmacie/stock')
+  await ouvrirSession(valeurs.email, motDePasse)
 }
 
 export async function deconnecter() {

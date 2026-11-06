@@ -1,0 +1,21 @@
+<svg width="620" height="420" viewBox="0 0 620 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="620" height="420" rx="28" fill="#F0FDF4"/>
+  <circle cx="500" cy="76" r="54" fill="#DCFCE7"/>
+  <circle cx="120" cy="92" r="42" fill="#BBF7D0"/>
+  <rect x="82" y="118" width="456" height="233" rx="22" fill="white"/>
+  <rect x="105" y="144" width="182" height="118" rx="16" fill="#ECFDF5"/>
+  <rect x="312" y="144" width="188" height="28" rx="10" fill="#D1FAE5"/>
+  <rect x="312" y="186" width="148" height="24" rx="10" fill="#E5E7EB"/>
+  <rect x="312" y="222" width="170" height="24" rx="10" fill="#E5E7EB"/>
+  <rect x="105" y="286" width="125" height="37" rx="12" fill="#047857"/>
+  <rect x="246" y="286" width="102" height="37" rx="12" fill="#DCFCE7"/>
+  <rect x="368" y="286" width="132" height="37" rx="12" fill="#DCFCE7"/>
+  <rect x="167" y="166" width="28" height="74" rx="8" fill="#047857"/>
+  <rect x="138" y="195" width="86" height="28" rx="8" fill="#047857"/>
+  <path d="M492 164C492 150.745 501.745 141 515 141H520C533.255 141 543 150.745 543 164V173H552C565.255 173 576 183.745 576 197V202C576 215.255 565.255 226 552 226H543V235C543 248.255 533.255 258 520 258H515C501.745 258 492 248.255 492 235V226H483C469.745 226 460 215.255 460 202V197C460 183.745 469.745 173 483 173H492V164Z" fill="#10B981"/>
+  <path d="M430 286C430 264.461 447.461 247 469 247H500C521.539 247 539 264.461 539 286V300H430V286Z" fill="#059669"/>
+  <circle cx="471" cy="292" r="12" fill="#ECFDF5"/>
+  <circle cx="498" cy="292" r="12" fill="#ECFDF5"/>
+  <circle cx="457" cy="308" r="10" fill="#A7F3D0"/>
+  <circle cx="511" cy="308" r="10" fill="#A7F3D0"/>
+</svg>

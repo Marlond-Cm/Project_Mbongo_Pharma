@@ -185,8 +185,27 @@ select {
 .home-page {
 	width: min(100% - 2rem, 64rem);
 	margin: 0 auto;
-	padding: clamp(4rem, 12vw, 8rem) 0;
+	padding: clamp(4rem, 12vw, 7rem) 0;
 	text-align: center;
+}
+
+.hero-content {
+	max-width: 48rem;
+	margin: 0 auto;
+}
+
+.hero-visual {
+	display: flex;
+	justify-content: center;
+	margin-top: 2rem;
+}
+
+.hero-image {
+	display: block;
+	width: min(100%, 38rem);
+	height: auto;
+	border-radius: 1.25rem;
+	box-shadow: 0 20px 44px rgb(9 74 51 / 12%);
 }
 
 .location-badge {
