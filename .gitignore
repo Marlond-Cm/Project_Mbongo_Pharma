@@ -1,0 +1,18 @@
+# dépendances
+node_modules/
+
+# build / cache Next.js
+.next/
+out/
+
+# variables d’environnement
+.env
+.env.*
+!.env.example
+
+# logs
+npm-debug.log*
+
+# fichiers de backup / divers
+*.bak
+.DS_Store

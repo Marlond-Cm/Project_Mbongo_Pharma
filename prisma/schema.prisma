@@ -1,0 +1,91 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  ADMIN
+  PHARMACY
+}
+
+enum Ville {
+  BRAZZAVILLE
+  POINTE_NOIRE
+}
+
+model Utilisateur {
+  id         String @id @default(cuid())
+  nom        String
+  email      String @unique
+  motDePasse String
+
+  role Role @default(PHARMACY)
+
+  pharmacieId String
+  pharmacie   Pharmacie @relation(fields: [pharmacieId], references: [id], onDelete: Cascade)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Pharmacie {
+  id String @id @default(cuid())
+
+  slug String @unique
+  nom  String
+
+  adresse  String
+  quartier String
+
+  ville Ville
+
+  telephone String @unique
+
+  estDeGarde Boolean @default(false)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  utilisateurs Utilisateur[]
+  stocks       Stock[]
+}
+
+model Medicament {
+  id String @id @default(cuid())
+
+  nom String @unique
+
+  description String?
+  categorie   String?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  stocks Stock[]
+}
+
+model Stock {
+  id String @id @default(cuid())
+
+  pharmacieId  String
+  medicamentId String
+
+  disponible Boolean @default(true)
+
+  prix Float?
+
+  quantite Int @default(0)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  pharmacie Pharmacie @relation(fields: [pharmacieId], references: [id], onDelete: Cascade)
+
+  medicament Medicament @relation(fields: [medicamentId], references: [id], onDelete: Cascade)
+
+  @@unique([pharmacieId, medicamentId])
+}
