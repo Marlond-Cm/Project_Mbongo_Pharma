@@ -1,0 +1,19 @@
+.conteneur { display: grid; gap: 0.5rem; }
+.boutons { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+
+.approuver,
+.refuser {
+  min-height: 2.75rem;
+  padding: 0.5rem 1.1rem;
+  border-radius: var(--radius-sm);
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+.approuver { background: var(--brand); color: #fff; border: 1px solid var(--brand); }
+.approuver:hover:not(:disabled) { background: var(--brand-dark); }
+.refuser { background: var(--danger-bg); color: var(--danger-ink); border: 1px solid var(--danger-bg); }
+.approuver:disabled,
+.refuser:disabled { opacity: 0.6; cursor: not-allowed; }
+
+.erreur { background: var(--danger-bg); color: var(--danger-ink); padding: 0.5rem 0.75rem; border-radius: var(--radius-sm); }
